@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        h4{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            margin: 0px;
+        }
+        body { 
+            padding: 0; 
+            margin: 0; 
+        } 
+  
+        a { 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: absolute; 
+            top: 40%; 
+            left: 40%; 
+            transform: translate(-50%, -50%); 
+            width: 180px; 
+            height: 35px; 
+            color: white; 
+            text-decoration: none; 
+            text-align: center; 
+            padding-top: 10px; 
+            font-size: 20px; 
+            overflow: hidden; 
+            border-radius: 50px;
+            background: violet; 
+        } 
+  
+        a::before { 
+            content: ""; 
+            position: absolute; 
+            width: 0; 
+            height: 0; 
+            left: 0; 
+            bottom: 0; 
+            border-style: solid; 
+            border-color: rgb(69, 57, 238); 
+            border-width: 80px 100px; 
+            z-index: -1; 
+            transform: rotate(360deg); 
+            transition: 1s; 
+            transform-origin: left; 
+        } 
+  
+        a:hover::before { 
+            border-color: rgb(255, 0, 221); 
+            transform: rotate(60deg); 
+        } 
+    </style>
+
+</head>
+<body style="background-image: url('{{ url_for('static', filename='backgroundse.png') }}'); background-size: cover; background-repeat: no-repeat;">
+    
+    <h1 style="color: white; text-align: center; padding-top: 130px; font-size: 70px; -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Fresh-Rotten Fruits Recognition</h1>
+
+    <h4>Fresh rotten recognition in business involves identifying </h4>
+    <h4>the quality and condition of goods, materials, </h4>
+    <h4>or assets to ensure optimal outcomes.</h4>
+    <br><br>
+    <div style="position: absolute; left: 30%; right: 45%; size: 30px;">
+        <a href="/upload" class="btn btn-primary">CLASSIFY NOW!</a>
+    </div>
+    <div style="position: absolute; left: 59%; right: 45%; size: 30px;">
+        <a href="#about" class="btn btn-primary">ABOUT US!</a>
+    </div>
+
+</body>
+</html>
